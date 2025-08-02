@@ -47,13 +47,13 @@ try:
 except:
 	pass
 
-__addon__              = xbmcaddon.Addon()
-__addonid__            = __addon__.getAddonInfo('id')
-__addonversion__       = tuple([int(x) for x in __addon__.getAddonInfo('version').split('.')])
-__scriptPath__         = __addon__.getAddonInfo('path')
-__profile__            = xbmc.translatePath(__addon__.getAddonInfo('profile'))
-__setting__            = __addon__.getSetting
-videoplaylistlocation  = xbmc.translatePath('special://profile/playlists/video/')
+__addon__ = xbmcaddon.Addon()
+__addonid__ = __addon__.getAddonInfo("id")
+__addonversion__ = tuple([int(x) for x in __addon__.getAddonInfo("version").split(".")])
+__scriptPath__ = __addon__.getAddonInfo("path")
+__profile__ = __addon__.getAddonInfo("profile")
+__setting__ = __addon__.getSetting
+videoplaylistlocation = __addon__.getAddonInfo('profile') + "/playlists/video/"
 start_time             = time.time()
 base_time              = time.time()
 WINDOW                 = xbmcgui.Window(10000)
